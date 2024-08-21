@@ -61,11 +61,11 @@ class: center, middle
 
 
 
-
+  
 ## Introduction to Git and GitHub
 
 .large[Dr. Edgar Treischl] &lt;br&gt;
-.large[Last update: 2024-08-18]
+.large[Last update: 2024-08-21]
 
 &lt;br/&gt;
 &lt;br/&gt;
@@ -79,7 +79,7 @@ You may copy, distribute, and use the slides in your own work, as long as you gi
 
 
 ---
-## 📆 Agenda
+## 📅 Agenda
 
 
 .pull-left[
@@ -246,10 +246,6 @@ class: center, middle
 git --version
 ```
 
-```
-## git version 2.39.3 (Apple Git-146)
-```
-
 
 - Create a free GitHub account
 
@@ -285,15 +281,6 @@ use_git_config(user.name = "Jane Doe",
 
 ``` bash
 git config --global --list
-```
-
-```
-## filter.lfs.clean=git-lfs clean -- %f
-## filter.lfs.smudge=git-lfs smudge -- %f
-## filter.lfs.process=git-lfs filter-process
-## filter.lfs.required=true
-## user.name=Edgar Treischl
-## user.email=77931249+edgar-treischl@users.noreply.github.com
 ```
 
 
@@ -380,16 +367,6 @@ credentials::set_github_pat("token")
 ``` r
 #Finally, whoami will show you who you are on GitHub
 gh::gh_whoami()
-```
-
-```
-## {
-##   "name": "Edgar Treischl",
-##   "login": "edgar-treischl",
-##   "html_url": "https://github.com/edgar-treischl",
-##   "scopes": "gist, repo, user, workflow",
-##   "token": "ghp_...Cmqg"
-## }
 ```
 
 

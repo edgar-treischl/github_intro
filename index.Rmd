@@ -76,10 +76,10 @@ style_mono_accent(
 )
 ```
 
-
+  
 ## Introduction to Git and GitHub
 
-.large[Dr. Edgar Treischl] <br>
+.large[Dr. Edgar J. Treischl] <br>
 .large[Last update: `r Sys.Date()`]
 
 <br/>
