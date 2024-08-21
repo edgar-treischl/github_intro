@@ -76,10 +76,10 @@ style_mono_accent(
 )
 ```
 
-
+  
 ## Introduction to Git and GitHub
 
-.large[Dr. Edgar Treischl] <br>
+.large[Dr. Edgar J. Treischl] <br>
 .large[Last update: `r Sys.Date()`]
 
 <br/>
@@ -111,7 +111,7 @@ You may copy, distribute, and use the slides in your own work, as long as you gi
 .pull-right[
 
 
-<a href="https://ggplot2.tidyverse.org/" target="_blank"><img src="https://edgar-treischl.github.io/PracticeR/reference/figures/cover.png" alt="The ggplot2 package" width="200"/></a>
+<a href="https://edgar-treischl.github.io/PracticeR/" target="_blank"><img src="https://edgar-treischl.github.io/PracticeR/reference/figures/cover.png" alt="The ggplot2 package" width="200"/></a>
 
 This workshop is based on Practice R.
 ]
@@ -384,6 +384,7 @@ gh::gh_whoami()
 
 <img src="images/Fig_0903.png" style="width: 60%"/>
 
+
 ---
 ## 02: Getting Started: Quick Setup
 <img src="images/Fig_0904.png" style="width: 80%"/>
@@ -460,6 +461,8 @@ git merge <branch-name>
 ]
 
 .pull-right[
+<br/>
+<br/>
 <figure>
     <img src="images/allison_horstgf.png" style="width: 100%"/>
     <figcaption style = "color: darkgray;">'Artwork by @allison_horst'</figcaption>
@@ -500,6 +503,8 @@ git reset
 
 ]
 .pull-right[
+<br/>
+<br/>
 <a href="https://git-scm.com/book/de/v2" target="_blank"><img src="https://git-scm.com/images/progit2.png" alt="Pro Git" width="50%"/></a>
 ]
 
@@ -508,6 +513,19 @@ git reset
 ## 03: Basics of Git: Commit history
 
 <img src="images/Fig_0908.png" style="width: 80%"/>
+
+
+---
+## 04: Practice makes perfect
+
+Now it's your turn:
+
+- Create a new repository on GitHub  
+- Clone the repository to your local machine
+- Add a new file to the repository
+- Commit the changes
+- Push the changes to the remote repository
+
 
 
 
