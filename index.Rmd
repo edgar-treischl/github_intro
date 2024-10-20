@@ -108,11 +108,11 @@ You may copy, distribute, and use the slides in your own work, as long as you gi
 
 .pull-left[
 
-### 01. Git/GitHub ... What?
-### 02. Getting Started
-### 03. Basics of Git
-### 04. Practice Makes Perfect
-### 05. Gist
+### `r emoji::emoji("one")` Git/GitHub ... What?
+### `r emoji::emoji("two")` Getting Started
+### `r emoji::emoji("three")` Basics of Git
+### `r emoji::emoji("four")` Practice Makes Perfect
+### `r emoji::emoji("five")` Gist
 
 
 
@@ -133,7 +133,7 @@ background-image: url("images/ibm.gif")
 background-size: cover
 class: bottom, center
 
-# .white[(1): Git/GitHub ... What?] 
+# .white[`r emoji::emoji("one")` Git/GitHub ... What?] 
 
 
 
@@ -257,7 +257,7 @@ background-image: url("images/g3.gif")
 background-size: cover
 class: bottom, center
 
-# .white[(2) Getting Started] 
+# .white[`r emoji::emoji("two")` Getting Started] 
 
 
 
@@ -433,7 +433,7 @@ background-image: url("images/merge.gif")
 background-size: cover
 class: bottom, center
 
-# .white[(3) Basics of Git] 
+# .white[`r emoji::emoji("three")` Basics of Git] 
 
 
 ---
@@ -548,19 +548,17 @@ background-image: url("images/practice.gif")
 background-size: cover
 class: bottom, center
 
-# .white[(4): Practice Makes Perfect] 
+# .white[`r emoji::emoji("four")` Practice Makes Perfect] 
 
 
 ---
 ## Practice Makes Perfect
 
-Now it's your turn:
-
-- Create a new repository on GitHub  
-- Clone the repository to your local machine
-- Add a new file to the repository
-- Commit the changes
-- Push the changes to the remote repository
+### `r emoji::emoji("plus")` Create a new repository on GitHub  
+### `r emoji::emoji("pc")` Clone the repository on your local machine
+### `r emoji::emoji("file")` Add a new repository file
+### `r emoji::emoji("button")` Commit the changes
+### `r emoji::emoji("mail")` Push the changes to the remote repository
 
 
 
@@ -569,7 +567,7 @@ background-image: url("images/bite.gif")
 background-size: cover
 class: bottom, center
 
-# .black[(5): Gist]
+# .black[`r emoji::emoji("five")` Gist]
 
 
 
@@ -656,9 +654,10 @@ gist::gistAddin()
 class: center, middle
 
 
-<img src="images/octocat.png" style="width: 40%"/>
+<img src="images/octocat.png" style="width: 30%"/>
 
 ## Thank you for your attention!
+
 
 
 
