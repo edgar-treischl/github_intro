@@ -92,17 +92,27 @@ You may copy, distribute, and use the slides in your own work, as long as you gi
 <img align="right" src="images/by-nceu.png" width="150px"/>
 
 
+```{css, echo = F}
+.reduced_opacity {
+  opacity: 0.5;
+}
+```
+
 
 ---
 ## `r emoji::emoji("schedule")` Agenda
 
 
+
+
+
 .pull-left[
 
-### 01. What is Git/GitHub?
-### 02. Getting started
+### 01. Git/GitHub ... What?
+### 02. Getting Started
 ### 03. Basics of Git
-### 04. Practice makes perfect
+### 04. Practice Makes Perfect
+### 05. Gist
 
 
 
@@ -119,8 +129,17 @@ This workshop is based on Practice R.
 
 
 ---
+background-image: url("images/ibm.gif")
+background-size: cover
+class: bottom, center
 
-## 01: What is Git/GitHub? 
+# .white[(1): Git/GitHub ... What?] 
+
+
+
+---
+
+## Git/GitHub ... What?
 
 .left-column[
 <br/>
@@ -159,7 +178,7 @@ This workshop is based on Practice R.
 
 
 ---
-## 01: Why Git/GitHub: ... 
+## Git/GitHub ... What?
 
 
 .panelset[
@@ -233,19 +252,17 @@ jobs:
 
 
 
+---
+background-image: url("images/g3.gif")
+background-size: cover
+class: bottom, center
 
+# .white[(2) Getting Started] 
 
 
 
 ---
-class: center, middle
-
-## Getting Started
-
-
-
----
-## 02: Getting Started: Install Git
+## Getting Started: Install Git
 
 - Windows: https://git-scm.com/download/win
 - OS X: https://git-scm.com/download/mac
@@ -263,7 +280,11 @@ git --version
 
 
 ---
-## 02: Getting Started: Introduce Yourself
+background-image: url(https://usethis.r-lib.org/logo.png)
+background-position: 90% 5%
+background-size: 10%
+
+## Getting Started: Introduce Yourself
 
 
 ### Via the shell or ...
@@ -285,7 +306,7 @@ use_git_config(user.name = "Jane Doe",
 
 
 ---
-## 02: Getting Started: Introduce Yourself
+## Getting Started: Introduce Yourself
 
 ### The list option returns all settings
 
@@ -295,7 +316,7 @@ git config --global --list
 
 
 ---
-## 02: Getting Started: New Vocabulary
+## Getting Started: New Vocabulary
 
 .pull-left[
 
@@ -318,7 +339,7 @@ git config --global --list
 
 
 ---
-## 02: Getting Started: New Vocabulary
+## Getting Started: New Vocabulary
 
 
 .pull-left[
@@ -345,7 +366,7 @@ git config --global --list
 
 
 ---
-## 02: Getting Started: Connect to GitHub
+## Getting Started: Connect to GitHub
 
 ### Create a Personal Access Token
 
@@ -369,7 +390,7 @@ credentials::set_github_pat("token")
 
 
 ---
-## 02: Getting Started: Connect to GitHub
+## Getting Started: Connect to GitHub
 
 
 
@@ -380,36 +401,43 @@ gh::gh_whoami()
 
 
 ---
-## 02: Getting Started: Create a Repository
+## Getting Started: Create a Repository
 
 <img src="images/Fig_0903.png" style="width: 60%"/>
 
 
 ---
-## 02: Getting Started: Quick Setup
+## Getting Started: Quick Setup
 <img src="images/Fig_0904.png" style="width: 80%"/>
 
 ---
-## 02: Getting Started: Setup in RStudio
+## Getting Started: Setup in RStudio
 
 <img src="images/Fig_0905.png" style="width: 50%"/>
 
 
 ---
-## 02: Getting Started: Git Pane in RStudio I
+## Getting Started: Git Pane in RStudio I
 
 <img src="images/Fig_0906.png" style="width: 80%"/>
 
 ---
-## 02: Getting Started: Git Pane in RStudio II
+## Getting Started: Git Pane in RStudio II
 
 <img src="images/Fig_0907.png" style="width: 80%"/>
 
 
 
+---
+background-image: url("images/merge.gif")
+background-size: cover
+class: bottom, center
+
+# .white[(3) Basics of Git] 
+
 
 ---
-## 03: Basics of Git: Basic setup
+## Basics of Git: Basic setup
 
 ```bash
 #git init: Initialize a new repository
@@ -433,7 +461,7 @@ git checkout <branch-name>
 
 
 ---
-## 03: Basics of Git: Daily workflow
+## Basics of Git: Daily workflow
 
 .pull-left[
 
@@ -474,7 +502,7 @@ git merge <branch-name>
 
 
 ---
-## 03: Basics of Git: Troubleshooting `r emoji::emoji("skull")`
+## Basics of Git: Troubleshooting `r emoji::emoji("skull")`
 
 .pull-left[
 
@@ -510,13 +538,21 @@ git reset
 
 
 ---
-## 03: Basics of Git: Commit history
+## Basics of Git: Commit history
 
 <img src="images/Fig_0908.png" style="width: 80%"/>
 
 
 ---
-## 04: Practice makes perfect
+background-image: url("images/practice.gif")
+background-size: cover
+class: bottom, center
+
+# .white[(4): Practice Makes Perfect] 
+
+
+---
+## Practice Makes Perfect
 
 Now it's your turn:
 
@@ -526,6 +562,91 @@ Now it's your turn:
 - Commit the changes
 - Push the changes to the remote repository
 
+
+
+---
+background-image: url("images/bite.gif")
+background-size: cover
+class: bottom, center
+
+# .black[(5): Gist]
+
+
+
+
+---
+## Gist
+
+.panelset[
+
+.panel[.panel-name[Package]
+
+.pull-left[
+#### The gist package provides a set of functions to work with GitHub Gist. 
+
+#### It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
+]
+
+
+.pull-right[
+<a href="https://edgar-treischl.github.io/gist/" target="_blank"><img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="right" width="200"/></a>
+]
+
+
+
+]
+
+.panel[.panel-name[Workflow]
+
+.pull-left[
+
+```{r, eval=FALSE}
+library(gist)
+#Create a gist
+gist_create(name = "A_Test.R", 
+            code = '#Test
+print("Hello world")', 
+            description = "Test Gist")
+```
+
+```{r, eval=FALSE}
+#gistfiles lists all files and returns names and ids
+gist_get(filename = "A_Test.R")
+
+#> ✔ Copied A_Test.R from your GitHub account.
+```
+
+
+
+]
+
+.pull-right[
+<img src="images/gist_screen.png" style="width: 100%"/>
+]
+]
+
+.panel[.panel-name[Addin]
+
+.pull-left[
+
+#### Further functions: Delete and list gists
+
+#### R Studio Addin: 
+
+```{r, eval=FALSE}
+#The gistAddin()
+gist::gistAddin()
+```
+
+
+]
+
+.pull-right[
+<img src="https://edgar-treischl.github.io/gist/reference/figures/gistapp.png" style="width: 75%"/>
+]
+
+]
+]
 
 
 

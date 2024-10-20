@@ -65,7 +65,7 @@ class: center, middle
 ## Introduction to Git and GitHub
 
 .large[Dr. Edgar J. Treischl] &lt;br&gt;
-.large[Last update: 2024-08-21]
+.large[Last update: 2024-10-20]
 
 &lt;br/&gt;
 &lt;br/&gt;
@@ -77,17 +77,27 @@ You may copy, distribute, and use the slides in your own work, as long as you gi
 &lt;img align="right" src="images/by-nceu.png" width="150px"/&gt;
 
 
+&lt;style type="text/css"&gt;
+.reduced_opacity {
+  opacity: 0.5;
+}
+&lt;/style&gt;
+
 
 ---
-## 📅 Agenda
+## 📆 Agenda
+
+
+
 
 
 .pull-left[
 
-### 01. What is Git/GitHub?
-### 02. Getting started
+### 01. Git/GitHub ... What?
+### 02. Getting Started
 ### 03. Basics of Git
-### 04. Practice makes perfect
+### 04. Practice Makes Perfect
+### 05. Gist
 
 
 
@@ -104,8 +114,17 @@ This workshop is based on Practice R.
 
 
 ---
+background-image: url("images/ibm.gif")
+background-size: cover
+class: bottom, center
 
-## 01: What is Git/GitHub? 
+# .white[(1): Git/GitHub ... What?] 
+
+
+
+---
+
+## Git/GitHub ... What?
 
 .left-column[
 &lt;br/&gt;
@@ -144,7 +163,7 @@ This workshop is based on Practice R.
 
 
 ---
-## 01: Why Git/GitHub: ... 
+## Git/GitHub ... What?
 
 
 .panelset[
@@ -220,19 +239,17 @@ jobs:
 
 
 
+---
+background-image: url("images/g3.gif")
+background-size: cover
+class: bottom, center
 
+# .white[(2) Getting Started] 
 
 
 
 ---
-class: center, middle
-
-## Getting Started
-
-
-
----
-## 02: Getting Started: Install Git
+## Getting Started: Install Git
 
 - Windows: https://git-scm.com/download/win
 - OS X: https://git-scm.com/download/mac
@@ -246,12 +263,20 @@ class: center, middle
 git --version
 ```
 
+```
+## git version 2.39.5 (Apple Git-154)
+```
+
 
 - Create a free GitHub account
 
 
 ---
-## 02: Getting Started: Introduce Yourself
+background-image: url(https://usethis.r-lib.org/logo.png)
+background-position: 90% 5%
+background-size: 10%
+
+## Getting Started: Introduce Yourself
 
 
 ### Via the shell or ...
@@ -274,7 +299,7 @@ use_git_config(user.name = "Jane Doe",
 
 
 ---
-## 02: Getting Started: Introduce Yourself
+## Getting Started: Introduce Yourself
 
 ### The list option returns all settings
 
@@ -283,9 +308,18 @@ use_git_config(user.name = "Jane Doe",
 git config --global --list
 ```
 
+```
+## filter.lfs.clean=git-lfs clean -- %f
+## filter.lfs.smudge=git-lfs smudge -- %f
+## filter.lfs.process=git-lfs filter-process
+## filter.lfs.required=true
+## user.name=Edgar Treischl
+## user.email=77931249+edgar-treischl@users.noreply.github.com
+```
+
 
 ---
-## 02: Getting Started: New Vocabulary
+## Getting Started: New Vocabulary
 
 .pull-left[
 
@@ -308,7 +342,7 @@ git config --global --list
 
 
 ---
-## 02: Getting Started: New Vocabulary
+## Getting Started: New Vocabulary
 
 
 .pull-left[
@@ -335,7 +369,7 @@ git config --global --list
 
 
 ---
-## 02: Getting Started: Connect to GitHub
+## Getting Started: Connect to GitHub
 
 ### Create a Personal Access Token
 
@@ -359,7 +393,7 @@ credentials::set_github_pat("token")
 
 
 ---
-## 02: Getting Started: Connect to GitHub
+## Getting Started: Connect to GitHub
 
 
 
@@ -374,43 +408,50 @@ gh::gh_whoami()
 ##   "name": "Edgar Treischl",
 ##   "login": "edgar-treischl",
 ##   "html_url": "https://github.com/edgar-treischl",
-##   "scopes": "gist, repo, workflow",
-##   "token": "gho_...zkar"
+##   "scopes": "gist, repo, user, workflow",
+##   "token": "ghp_...Cmqg"
 ## }
 ```
 
 
 ---
-## 02: Getting Started: Create a Repository
+## Getting Started: Create a Repository
 
 &lt;img src="images/Fig_0903.png" style="width: 60%"/&gt;
 
 
 ---
-## 02: Getting Started: Quick Setup
+## Getting Started: Quick Setup
 &lt;img src="images/Fig_0904.png" style="width: 80%"/&gt;
 
 ---
-## 02: Getting Started: Setup in RStudio
+## Getting Started: Setup in RStudio
 
 &lt;img src="images/Fig_0905.png" style="width: 50%"/&gt;
 
 
 ---
-## 02: Getting Started: Git Pane in RStudio I
+## Getting Started: Git Pane in RStudio I
 
 &lt;img src="images/Fig_0906.png" style="width: 80%"/&gt;
 
 ---
-## 02: Getting Started: Git Pane in RStudio II
+## Getting Started: Git Pane in RStudio II
 
 &lt;img src="images/Fig_0907.png" style="width: 80%"/&gt;
 
 
 
+---
+background-image: url("images/merge.gif")
+background-size: cover
+class: bottom, center
+
+# .white[(3) Basics of Git] 
+
 
 ---
-## 03: Basics of Git: Basic setup
+## Basics of Git: Basic setup
 
 ```bash
 #git init: Initialize a new repository
@@ -434,7 +475,7 @@ git checkout &lt;branch-name&gt;
 
 
 ---
-## 03: Basics of Git: Daily workflow
+## Basics of Git: Daily workflow
 
 .pull-left[
 
@@ -475,7 +516,7 @@ git merge &lt;branch-name&gt;
 
 
 ---
-## 03: Basics of Git: Troubleshooting 💀
+## Basics of Git: Troubleshooting 💀
 
 .pull-left[
 
@@ -511,13 +552,21 @@ git reset
 
 
 ---
-## 03: Basics of Git: Commit history
+## Basics of Git: Commit history
 
 &lt;img src="images/Fig_0908.png" style="width: 80%"/&gt;
 
 
 ---
-## 04: Practice makes perfect
+background-image: url("images/practice.gif")
+background-size: cover
+class: bottom, center
+
+# .white[(4): Practice Makes Perfect] 
+
+
+---
+## Practice Makes Perfect
 
 Now it's your turn:
 
@@ -527,6 +576,94 @@ Now it's your turn:
 - Commit the changes
 - Push the changes to the remote repository
 
+
+
+---
+background-image: url("images/bite.gif")
+background-size: cover
+class: bottom, center
+
+# .black[(5): Gist]
+
+
+
+
+---
+## Gist
+
+.panelset[
+
+.panel[.panel-name[Package]
+
+.pull-left[
+#### The gist package provides a set of functions to work with GitHub Gist. 
+
+#### It allows you to copy, create, and delete gists via the GitHub API. Moreover, it comes with an R Studio addin - a shiny app - to manage your Gists.
+]
+
+
+.pull-right[
+&lt;a href="https://edgar-treischl.github.io/gist/" target="_blank"&gt;&lt;img src="https://edgar-treischl.github.io/gist/logo.png" alt="The ggplot2 package" align="right" width="200"/&gt;&lt;/a&gt;
+]
+
+
+
+]
+
+.panel[.panel-name[Workflow]
+
+.pull-left[
+
+
+``` r
+library(gist)
+#Create a gist
+gist_create(name = "A_Test.R", 
+            code = '#Test
+print("Hello world")', 
+            description = "Test Gist")
+```
+
+
+``` r
+#gistfiles lists all files and returns names and ids
+gist_get(filename = "A_Test.R")
+
+#&gt; ✔ Copied A_Test.R from your GitHub account.
+```
+
+
+
+]
+
+.pull-right[
+&lt;img src="images/gist_screen.png" style="width: 100%"/&gt;
+]
+]
+
+.panel[.panel-name[Addin]
+
+.pull-left[
+
+#### Further functions: Delete and list gists
+
+#### R Studio Addin: 
+
+
+``` r
+#The gistAddin()
+gist::gistAddin()
+```
+
+
+]
+
+.pull-right[
+&lt;img src="https://edgar-treischl.github.io/gist/reference/figures/gistapp.png" style="width: 75%"/&gt;
+]
+
+]
+]
 
 
 
